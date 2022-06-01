@@ -14,4 +14,6 @@ duckscript = "0.7.2"
 duckscriptsdk = "0.8.12"
 
 [features]
+default = ["static"]
 doc = []
+static = []

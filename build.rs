@@ -35,7 +35,10 @@ fn main() {
 
     // Tell cargo to tell rustc to link the ember_slim-shared library.
     println!("cargo:rustc-link-search=native={}/libember_slim/", out);
-    println!("cargo:rustc-link-lib=ember_slim-shared");
+    match env::var("CARGO_FEATURE_STATIC") {
+        Ok(_) => println!("cargo:rustc-link-lib=static=ember_slim-static"),
+        _ => println!("cargo:rustc-link-lib=ember_slim-shared"),
+    }
 
     // The bindgen::Builder is the main entry point
     // to bindgen, and lets you build up options for
