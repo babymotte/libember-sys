@@ -10,3 +10,5 @@ libc = "0.2.123"
 
 [build-dependencies]
 bindgen = "0.59.2"
+duckscript = "0.7.2"
+duckscriptsdk = "0.8.12"
