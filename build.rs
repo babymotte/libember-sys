@@ -50,7 +50,7 @@ fn main() {
         // Tell cargo to invalidate the built crate whenever any of the
         // included header files changed.
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-        .generate_comments(false)
+        .generate_comments(env::var("CARGO_FEATURE_DOC").is_ok())
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.
