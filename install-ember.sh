@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TODO make sure git, gcc, cmake and make are installed
+# TODO make sure git, gcc, clang, cmake and make are installed
 
 git clone https://github.com/Lawo/ember-plus.git
 cd ember-plus
